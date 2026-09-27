@@ -22,3 +22,7 @@ Source: facebook.com/atebaaelkheirnasrcity (scraped 2026-09-27 via Apify `facebo
 | other | 1 | Blank video thumbnail (ignore) |
 
 Classification: 3 parallel vision agents labeled every image using captions + OCR; results were then spot-checked by random sheet sampling and corrected (speakers split from leaders, a few team/sub fixes).
+
+## People (`people.json`, `people/`)
+- `leadership` — 12 activity heads & supervisors merged across their role cards (clinic structure 15/5/2026, Gray's Moments, جمعة الخير): Arabic/English name, `tier` (heads | supervisors), roles, clean portrait cropped from the card (`people/<fbid>.png`), and source cards.
+- `speakers` — 7 Beyond Medicine guest doctors with bio text from their "Meet Our Speaker" posts and card image.

@@ -1,0 +1,204 @@
+{
+ "leadership": [
+  {
+   "name_ar": "مصطفى أحمد",
+   "name_en": "Mostafa Ahmed",
+   "tier": "heads",
+   "roles": [
+    "The Leader — Gray's Moments / جمعة الخير"
+   ],
+   "portrait": "people/122126093631041269.png",
+   "cards": [
+    "media/leaders/grays-moments__122126093631041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "حياة أحمد",
+   "name_en": "Hayat Ahmed",
+   "tier": "heads",
+   "roles": [
+    "The Head — عيادة الباطنة (المقطم)",
+    "Clinics Supervisor — Gray's Moments"
+   ],
+   "portrait": "people/122127997821041269.png",
+   "cards": [
+    "media/leaders/internal-clinic__122127997821041269.jpg",
+    "media/leaders/grays-moments__122126093769041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "مريم محمد",
+   "name_en": "Mariam Mohamed",
+   "tier": "heads",
+   "roles": [
+    "Vice Head — عيادة الباطنة",
+    "Volunteer Manager — Gray's Moments",
+    "أفضل Head خلال ربع السنة (مايو 2026)"
+   ],
+   "portrait": "people/122127997863041269.png",
+   "cards": [
+    "media/leaders/internal-clinic__122127997863041269.jpg",
+    "media/leaders/grays-moments__122126093715041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "ملك إبراهيم",
+   "name_en": "Malak Ibrahim",
+   "tier": "heads",
+   "roles": [
+    "Head of Organization — عيادة الباطنة",
+    "Screening Supervisor — Gray's Moments"
+   ],
+   "portrait": "people/122127997905041269.png",
+   "cards": [
+    "media/leaders/internal-clinic__122127997905041269.jpg",
+    "media/leaders/grays-moments__122126127789041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "حامد شوقي البدوي",
+   "name_en": "Hamed Shawky El-Badawy",
+   "tier": "heads",
+   "roles": [
+    "Pharmacy & Gates Supervisor — جمعة الخير",
+    "أفضل Head خلال ربع السنة (مايو 2026)"
+   ],
+   "portrait": "people/122126094051041269.png",
+   "cards": [
+    "media/leaders/gomaet-el-kheir__122126094051041269.jpg",
+    "media/leaders/best-head__122128888407041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "مبين علاء",
+   "name_en": "Mobeen Alaa",
+   "tier": "heads",
+   "roles": [
+    "Head of Screening — عيادة الباطنة"
+   ],
+   "portrait": "people/122127997947041269.png",
+   "note": "portrait shows back (vest) only",
+   "cards": [
+    "media/leaders/internal-clinic__122127997947041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "عماد أسامة",
+   "name_en": "Emad Osama",
+   "tier": "heads",
+   "roles": [
+    "Head of Pharmacy — عيادة الباطنة",
+    "أفضل متطوع — جمعة الخير"
+   ],
+   "portrait": "people/122127997983041269.png",
+   "cards": [
+    "media/leaders/internal-clinic__122127997983041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "مريم خالد",
+   "name_en": "Mariam Khaled",
+   "tier": "supervisors",
+   "roles": [
+    "The Joker — Gray's Moments"
+   ],
+   "portrait": "people/122126093673041269.png",
+   "cards": [
+    "media/leaders/grays-moments__122126093673041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "منة ربيع",
+   "name_en": "Menna Rabie",
+   "tier": "supervisors",
+   "roles": [
+    "Medications & Lab Supervisor — جمعة الخير"
+   ],
+   "portrait": "people/122126094009041269.png",
+   "cards": [
+    "media/leaders/gomaet-el-kheir__122126094009041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "بسملة محمد",
+   "name_en": "Basmala Mohamed",
+   "tier": "supervisors",
+   "roles": [
+    "Family Waiting Supervisor — جمعة الخير"
+   ],
+   "portrait": "people/122126093967041269.png",
+   "cards": [
+    "media/leaders/gomaet-el-kheir__122126093967041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "يارا علاء",
+   "name_en": "Yara Alaa",
+   "tier": "supervisors",
+   "roles": [
+    "Awareness Supervisor — جمعة الخير",
+    "أفضل متطوعة — قافلة 30 يناير"
+   ],
+   "portrait": "people/122126093925041269.png",
+   "cards": [
+    "media/leaders/gomaet-el-kheir__122126093925041269.jpg"
+   ]
+  },
+  {
+   "name_ar": "سندس أحمد",
+   "name_en": "Sondos Ahmed",
+   "tier": "supervisors",
+   "roles": [
+    "Awareness Supervisor — جمعة الخير"
+   ],
+   "portrait": "people/122126093865041269.png",
+   "cards": [
+    "media/leaders/gomaet-el-kheir__122126093865041269.jpg"
+   ]
+  }
+ ],
+ "speakers": [
+  {
+   "name": "Dr. Amr El-Baraky",
+   "bio": "We’re excited to introduce Dr. Amr El-Baraky as one of our distinguished speakers at “Beyond Medicine” 👨‍⚕️",
+   "card": "media/speakers/beyond-medicine__122136259551041269.jpg",
+   "post_url": "https://www.facebook.com/atebaaelkheirnasrcity/posts/pfbid0odEMGzi9GJs1WtNoDSpWGUEhxnjx92F4FQtXqizuHBHWzeET4RWxQQRTXiG1g6AAl"
+  },
+  {
+   "name": "Prof. Dr. Naglaa Farouk Abd El Haliem",
+   "bio": "🎓Professor & Head of Medical Microbiology and Immunology Department,\nFaculty of Medicine for girls, Al-Azhar University, Cairo, Egypt.\n\nWe’re excited to introduce Dr. Naglaa as one of our distinguished speakers at “Beyond Medicine” 👩‍⚕️",
+   "card": "media/speakers/beyond-medicine__122136336741041269.jpg",
+   "post_url": "https://www.facebook.com/atebaaelkheirnasrcity/posts/pfbid0WY9cKnVQK38Mo8MrJGMXh6P8MCMk6JvYQeSWT6AF2qob3mJbRNVo2ob2s29uov6gl"
+  },
+  {
+   "name": "Prof. Dr. Medhat Morsi",
+   "bio": "We’re excited to introduce Prof. Dr. Medhat Morsi as one of our distinguished speakers at “Beyond Medicine” 🩺✨\n\n🎓 Professor of Anatomy and Embryology\nFaculty of Medicine, Kasr Al-Ainy, Cairo University.\n\nHe also serves as:\n🔹 Head of the Anatomy Department at Nahda University.\n🔹 Head of the Anatomy Department at Ahram Canadian University.\n🔹 Member of the Egyptian Medical Syndicate’s General Council.\n🔹 Member of the Anatomy Professors’ Promotion Committee at the Supreme Council of Universities.",
+   "card": "media/speakers/beyond-medicine__122136453807041269.jpg",
+   "post_url": "https://www.facebook.com/atebaaelkheirnasrcity/posts/pfbid0A2rKajRiNJ3XotpQ8Pmw8gzxrFwN7RLvVjszX7TbDbcPk53bs9zCWttLtCrNdj7cl"
+  },
+  {
+   "name": "Dr. Mansour Algazar",
+   "bio": "We’re excited to introduce Dr. Mansour Al-Gazar as one of our distinguished speakers at “Beyond Medicine” \n\n Intern Doctor at Al-Azhar University Hospital, Assiut.\n\nBeyond his medical journey, Dr. Mansour is also a:\n🔹 Medicine Way Leader\n🔹 Researcher \n🔹 Biostatistician",
+   "card": "media/speakers/beyond-medicine__122136525585041269.jpg",
+   "post_url": "https://www.facebook.com/atebaaelkheirnasrcity/posts/pfbid0aRLj6vPnT1iMZYcECmu22WscekVV82UY8b2iur4sTcGqjCE5fZfsnTuW8nWdwMfPl"
+  },
+  {
+   "name": "Dr. Rania Mohamed Abdelgaleel",
+   "bio": "We’re excited to introduce Dr. Rania Mohamed Abdelgaleel as one of our distinguished speakers at “Beyond Medicine” 🩺\n\n🎓 Assistant Professor of Anatomy and Embryology\nFaculty of Medicine for Girls, Al-Azhar University, Cairo, Egypt",
+   "card": "media/speakers/beyond-medicine__122136545133041269.jpg",
+   "post_url": "https://www.facebook.com/atebaaelkheirnasrcity/posts/pfbid0HX53cYFdZZcffktcCUjBwySMVrWxu4ThNfm4hh3PZ6sYRqsjkE78Jj9rV2BQJTQ7l"
+  },
+  {
+   "name": "Dr. Hisham Essmat",
+   "bio": "We’re excited to introduce Dr. Hisham Essmat as one of our distinguished speakers at “Beyond Medicine” \n\n🎓 Lecturer of Biochemistry at several universities, including:\n🔹 Kasr Al-Ainy, Cairo University\n🔹 Helwan University",
+   "card": "media/speakers/beyond-medicine__122136605535041269.jpg",
+   "post_url": "https://www.facebook.com/atebaaelkheirnasrcity/posts/pfbid03XkQC9y2YhYjXh7uCNKX3jAZWgqf1cYyQViqiYeoiZS4YLFBZCrnKs5cvZYNsKVil"
+  },
+  {
+   "name": "Dr. Hossam Eissa",
+   "bio": "We’re excited to introduce Dr. Hossam Eissa as one of our distinguished speakers at “Beyond Medicine” \n\n🏥 Intern Doctor at El Demerdash Hospital",
+   "card": "media/speakers/beyond-medicine__122136620301041269.jpg",
+   "post_url": "https://www.facebook.com/atebaaelkheirnasrcity/posts/pfbid0y6feAcnHtn3JwaTBmSwJmAisE4Wu6WBhkSccZEAawqa24CadBsy3sA9JVyN7wvVhl"
+  }
+ ]
+}
