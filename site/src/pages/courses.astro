@@ -1,0 +1,34 @@
+---
+import Section from '../layouts/Section.astro';
+---
+<Section
+  key="courses"
+  title="الكورسات"
+  description="كورسات عملية مجانية لطلاب الطب: BLS، وخياطة الجروح، والحقن والكانيولا، وICC."
+  lead="نتعلّم لنخدم. تدريب عملي على مهارات يحتاجها كل طالب طب قبل أن يقف أمام مريض، يقدّمه أطباء متخصصون."
+  hero="course-cpr"
+  facts={[
+    ['لمن', 'طلاب الطب البشري'],
+    ['التكلفة', 'مجانًا'],
+    ['المكان', 'فرع رسالة، مدينة نصر'],
+  ]}
+  gallery={['course-instructor', 'course-suture', 'course-iv', 'course-cpr-2', 'course-suture-2', 'course-icc-group', 'course-suture-group']}
+  galleryTitle="من التدريب"
+  cta={{ title: 'احجز مكانك في الكورس القادم', text: 'الأماكن محدودة والحضور بأسبقية الحجز. نعلن عن كل كورس ورابط التسجيل على صفحتنا.', label: 'تابع المواعيد على فيسبوك', href: 'https://www.facebook.com/atebaaelkheirnasrcity' }}
+>
+  <section>
+    <h2>البرنامج</h2>
+    <ul class="rows">
+      <li><span class="row-main">الإنعاش القلبي الرئوي وطوارئ القلب</span><span class="row-side">BLS</span></li>
+      <li><span class="row-main">خياطة الجروح والعناية بها</span><span class="row-side">Suturing</span></li>
+      <li><span class="row-main">الحقن وتركيب الكانيولا الوريدية</span><span class="row-side">IV</span></li>
+      <li><span class="row-main">التدريب المكثف على الطوارئ</span><span class="row-side">ICC</span></li>
+      <li><span class="row-main">محاضرات ارتفاع ضغط الدم، مع بنيان</span><span class="row-side">أونلاين</span></li>
+    </ul>
+  </section>
+  <section>
+    <h2>كيف يكون اليوم</h2>
+    <p>شرح قصير، ثم تطبيق عملي على نماذج تدريبية: دمية الإنعاش، ونماذج الجلد للخياطة، وذراع التدريب للكانيولا. يتابع المدرب كل مشارك بنفسه حتى يتقن الخطوة.</p>
+    <p>بدأنا نشاطنا في سبتمبر 2025 بكورس تدريبي مكثف، وما زلنا نكرره لأن الإقبال عليه لا يتوقف.</p>
+  </section>
+</Section>

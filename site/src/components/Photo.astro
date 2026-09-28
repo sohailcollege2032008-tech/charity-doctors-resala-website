@@ -1,0 +1,38 @@
+---
+import { Picture } from 'astro:assets';
+import { photos } from '../data/photos.js';
+
+interface Props {
+  name: string;
+  sizes?: string;
+  eager?: boolean;
+  caption?: boolean;
+  class?: string;
+  reveal?: boolean;
+  /** Force a frame ratio (e.g. '4/3'); the photo is cover-cropped into it. */
+  ratio?: string;
+}
+
+const { ratio, name, sizes = '(min-width: 1100px) 50vw, 100vw', eager = false, caption = true, reveal = true, class: cls = '' } = Astro.props;
+const files = import.meta.glob<{ default: ImageMetadata }>('../assets/photos/*.jpg', { eager: true });
+const src = files[`../assets/photos/${name}.jpg`]?.default;
+if (!src) throw new Error(`Unknown photo: ${name}`);
+const meta = photos[name];
+---
+<figure class:list={['photo', { reveal }, cls]}>
+  <div class:list={['photo-frame', { fixed: ratio }]} style={ratio ? `aspect-ratio: ${ratio}` : undefined}>
+    <Picture
+      src={src}
+      alt={meta.alt}
+      formats={['avif', 'webp']}
+      fallbackFormat="webp"
+      widths={[400, 640, 900, 1280, 1600].filter((w) => w <= src.width)}
+      sizes={sizes}
+      quality={72}
+      loading={eager ? 'eager' : 'lazy'}
+      fetchpriority={eager ? 'high' : 'auto'}
+      decoding={eager ? 'sync' : 'async'}
+    />
+  </div>
+  {caption && <figcaption>{meta.caption}</figcaption>}
+</figure>

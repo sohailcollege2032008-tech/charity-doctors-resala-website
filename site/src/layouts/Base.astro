@@ -1,0 +1,114 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import { links } from '../data/photos.js';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  current?: string;
+}
+
+const { title, description, current = '' } = Astro.props;
+const nav = [
+  { href: '/convoys/', label: 'القوافل', key: 'convoys' },
+  { href: '/clinics/', label: 'العيادات', key: 'clinics' },
+  { href: '/courses/', label: 'الكورسات', key: 'courses' },
+  { href: '/events/', label: 'الإيفنتات', key: 'events' },
+  { href: '/team/', label: 'الفريق', key: 'team' },
+];
+---
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="ar_EG" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@600;700&display=swap"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="/" aria-label="أطباء الخير، الصفحة الرئيسية">
+          <Image src={logo} alt="" width={30} height={39} loading="eager" />
+          <span class="brand-text">
+            <span class="brand-name">أطباء الخير</span>
+            <span class="brand-sub">رسالة، مدينة نصر</span>
+          </span>
+        </a>
+        <nav class="nav-desktop" aria-label="الأقسام">
+          {nav.map((n) => <a href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</a>)}
+        </nav>
+        <a class="btn btn-donate btn-sm" href={links.donate} target="_blank" rel="noopener">تبرّع</a>
+        <details class="nav-mobile">
+          <summary aria-label="القائمة">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"></path></svg>
+          </summary>
+          <nav aria-label="الأقسام">
+            <a href="/">الرئيسية</a>
+            {nav.map((n) => <a href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</a>)}
+            <a href={links.volunteer} target="_blank" rel="noopener">سجّل كمتطوع</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-about">
+          <p class="footer-name">أطباء الخير</p>
+          <p>نشاط تطوعي تابع لجمعية رسالة للأعمال الخيرية، فرع مدينة نصر. نعمل منذ سبتمبر 2025.</p>
+          <p class="footer-motto">خير الطب لخير الناس</p>
+        </div>
+        <nav class="footer-links" aria-label="روابط">
+          <a href="/">الرئيسية</a>
+          {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+        </nav>
+        <div class="footer-links">
+          <a href={links.volunteer} target="_blank" rel="noopener">استمارة التطوع</a>
+          <a href={links.donate} target="_blank" rel="noopener">التبرع عبر رسالة</a>
+          <a href={links.facebook} target="_blank" rel="noopener">صفحتنا على فيسبوك</a>
+          <a href={links.resala} target="_blank" rel="noopener">أطباء الخير على موقع رسالة</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="action-bar" data-action-bar hidden>
+      <a class="btn btn-primary" href={links.volunteer} target="_blank" rel="noopener">اتطوّع معانا</a>
+      <a class="btn btn-donate" href={links.donate} target="_blank" rel="noopener">تبرّع</a>
+    </div>
+
+    <script>
+      // Show the mobile action bar once the page's opening section has scrolled away.
+      const bar = document.querySelector<HTMLElement>('[data-action-bar]');
+      const hero = document.querySelector('[data-hero]');
+      if (bar && hero && 'IntersectionObserver' in window) {
+        bar.hidden = false;
+        new IntersectionObserver(([e]) => bar.classList.toggle('is-on', !e.isIntersecting), {
+          rootMargin: '0px 0px -40% 0px',
+        }).observe(hero);
+      }
+      // Close the mobile menu after choosing a link.
+      document.querySelectorAll('.nav-mobile a').forEach((a) =>
+        a.addEventListener('click', () => a.closest('details')?.removeAttribute('open'))
+      );
+    </script>
+  </body>
+</html>
