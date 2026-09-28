@@ -26,7 +26,7 @@ const meta = photos[name];
       alt={meta.alt}
       formats={['avif', 'webp']}
       fallbackFormat="webp"
-      widths={[400, 640, 900, 1280, 1600].filter((w) => w <= src.width)}
+      widths={[400, 640, 960, 1280].filter((w) => w <= src.width)}
       sizes={sizes}
       quality={72}
       loading={eager ? 'eager' : 'lazy'}
