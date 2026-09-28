@@ -1,0 +1,31 @@
+---
+import Section from '../layouts/Section.astro';
+---
+<Section
+  key="clinics"
+  title="العيادات"
+  description="عيادة الباطنة في المقطم وعيادة العيون: كشف ومتابعة وعلاج للأسر الأكثر احتياجًا."
+  lead="بعد القوافل جاءت العيادة: مكان ثابت يرجع له المريض، ويجد من يتابع حالته ويصرف له العلاج."
+  hero="clinic-child-eye"
+  facts={[
+    ['عيادة الباطنة', 'المقطم'],
+    ['الأيام', 'الجمعة، وبعض أيام الاثنين'],
+    ['عيادة العيون', 'تشخيص وعلاج'],
+  ]}
+  gallery={['clinic-team', 'clinic-bp', 'clinic-sugar', 'hero-eye-exam', 'clinic-bp-2', 'clinic-sugar-2']}
+  galleryTitle="من العيادات"
+>
+  <section>
+    <h2>كيف تعمل العيادة</h2>
+    <p>تُدار عيادة الباطنة بفريق له أدوار واضحة: رئاسة العيادة، والتنظيم، والفحص الأولي، والصيدلية. يبدأ المريض بقياس الضغط والسكر، ثم الكشف، ثم يخرج بعلاجه وموعد متابعته.</p>
+  </section>
+  <section>
+    <h2>ما نقدّمه في العيادات</h2>
+    <ul class="rows">
+      <li><span class="row-main">كشف ومتابعة الأمراض المزمنة</span><span class="row-side">باطنة</span></li>
+      <li><span class="row-main">قياس الضغط والسكر</span><span class="row-side">لكل مريض</span></li>
+      <li><span class="row-main">صرف العلاج</span><span class="row-side">صيدلية العيادة</span></li>
+      <li><span class="row-main">فحص النظر والتشخيص</span><span class="row-side">عيون</span></li>
+    </ul>
+  </section>
+</Section>

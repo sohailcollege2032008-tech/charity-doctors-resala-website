@@ -1,0 +1,77 @@
+---
+// A section page reads like its own small landing page:
+// title and photo, the facts, the story, the gallery, then the way to take part.
+import Base from './Base.astro';
+import Photo from '../components/Photo.astro';
+import { links } from '../data/photos.js';
+
+interface Props {
+  key: string;
+  title: string;
+  description: string;
+  lead: string;
+  hero: string;
+  facts: [string, string][];
+  gallery: string[];
+  galleryTitle?: string;
+  cta?: { title: string; text: string; label: string; href?: string };
+}
+
+const { key, title, description, lead, hero, facts, gallery, galleryTitle = 'من الصور', cta } = Astro.props;
+const action = cta ?? {
+  title: 'انضم إلى اليوم القادم',
+  text: 'سجّل في استمارة التطوع، وسنتواصل معك بالموعد والمكان.',
+  label: 'سجّل في استمارة التطوع',
+};
+---
+<Base title={`${title} | أطباء الخير`} description={description} current={key}>
+  <section class="hero page-hero" data-hero>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="chip"><span class="chip-dot" aria-hidden="true"></span><a href="/">أطباء الخير</a>&nbsp;/ {title}</p>
+        <h1>{title}</h1>
+        <p class="lead">{lead}</p>
+        <dl class="facts">
+          {facts.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+        </dl>
+      </div>
+      <Photo name={hero} eager reveal={false} ratio="4/5" class="hero-photo" sizes="(min-width: 900px) 46vw, 100vw" />
+    </div>
+  </section>
+
+  <section class="section section-mist">
+    <div class="wrap prose">
+      <slot />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><h2>{galleryTitle}</h2></div>
+      <div class="gallery">
+        {gallery.map((g, i) => (
+          <Photo
+            name={g}
+            class={i % 5 === 0 ? 'wide' : ''}
+            sizes={i % 5 === 0 ? '(min-width: 900px) 66vw, 100vw' : '(min-width: 900px) 33vw, 50vw'}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-mist">
+    <div class="wrap join">
+      <div class="join-card">
+        <h2>{action.title}</h2>
+        <p>{action.text}</p>
+        <a class="btn btn-primary" href={action.href ?? links.volunteer} target="_blank" rel="noopener">{action.label}</a>
+      </div>
+      <div class="join-card">
+        <h2>تبرّع لأطباء الخير</h2>
+        <p>تبرّعك يستلمه فريق النشاط، ويُسجَّل باسم أطباء الخير داخل جمعية رسالة. راسلنا وسنرتّب معك طريقة التبرع.</p>
+        <a class="btn btn-donate" href={links.donateContact} target="_blank" rel="noopener">راسلنا للتبرع</a>
+      </div>
+    </div>
+  </section>
+</Base>

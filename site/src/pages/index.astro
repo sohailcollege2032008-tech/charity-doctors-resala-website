@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import { links } from '../data/photos.js';
+
+const pillars = [
+  {
+    photo: 'convoy-desk',
+    kicker: 'في أغلب أيام الجمعة',
+    title: 'القوافل الطبية',
+    text: 'نصل إلى القرى والمناطق الأكثر احتياجًا بكشف مبدئي، وقياس للضغط والسكر، وأخذ للتاريخ المرضي، وتوعية صحية بلغة بسيطة.',
+    href: '/convoys/',
+    more: 'اعرف أكثر عن القوافل',
+  },
+  {
+    photo: 'clinic-bp',
+    kicker: 'المقطم',
+    title: 'العيادات',
+    text: 'عيادة باطنة للكشف والمتابعة وصرف العلاج، وعيادة عيون للتشخيص والعلاج، وفحص دوري للضغط والسكر.',
+    href: '/clinics/',
+    more: 'اعرف أكثر عن العيادات',
+  },
+  {
+    photo: 'course-cpr',
+    kicker: 'مجانًا لطلاب الطب',
+    title: 'الكورسات',
+    text: 'تدريب عملي على مهارات يحتاجها كل طبيب: الإنعاش القلبي، وخياطة الجروح، والحقن والكانيولا.',
+    href: '/courses/',
+    more: 'اعرف أكثر عن الكورسات',
+  },
+  {
+    photo: 'ramadan-lentils',
+    kicker: 'مع جمعية رسالة',
+    title: 'أيام الخير',
+    text: 'نعبّئ شنط رمضان ونوزّعها، ونجهّز وجبات الإفطار، ونزور مستشفى رسالة لنعمل جنب الأطباء الكبار.',
+    href: '/events/',
+    more: 'اعرف أكثر عن الإيفنتات',
+  },
+];
+
+const field = [
+  { photo: 'convoy-ghaith-1', title: 'قافلة غيث' },
+  { photo: 'convoy-child-bp', title: 'حساسية الربيع تحت السيطرة' },
+  { photo: 'convoy-growing-team', title: 'Growing Healthy' },
+  { photo: 'convoy-elder', title: 'قافلة الربيع' },
+  { photo: 'convoy-t3-team', title: 'T3 Care' },
+  { photo: 'convoy-history', title: 'قافلة مايو' },
+];
+
+const courses = [
+  ['الإنعاش القلبي الرئوي', 'BLS'],
+  ['خياطة الجروح والإسعافات الأولية', 'Suturing'],
+  ['الحقن وتركيب الكانيولا', 'IV'],
+  ['التدريب المكثف على الطوارئ', 'ICC'],
+  ['محاضرات ارتفاع ضغط الدم', 'أونلاين'],
+];
+
+const speakers = ['د. هشام عصمت', 'د. رانيا عبد الجليل', 'أ.د. نجلاء فاروق', 'أ.د. مدحت مرسي', 'د. عمرو البرقي', 'د. منصور الجزار', 'د. حسام عيسى'];
+---
+<Base
+  title="أطباء الخير | رسالة مدينة نصر"
+  description="أطباء الخير نشاط تطوعي في جمعية رسالة بمدينة نصر: قوافل طبية، وعيادات، وكورسات عملية لطلاب الطب."
+>
+  <section class="hero" data-hero>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="chip"><span class="chip-dot" aria-hidden="true"></span>نشاط تطوعي في جمعية رسالة، مدينة نصر</p>
+        <p class="hero-brand" aria-hidden="true">أطباء الخير</p>
+        <h1>رعاية طبية كريمة، تصل إلى من يحتاجها</h1>
+        <p class="lead">طلاب طب وأطباء شباب ينزلون بالقوافل، ويديرون عيادة، ويتعلّمون وهم يخدمون. خير الطب لخير الناس.</p>
+        <div class="hero-actions">
+          <a class="btn btn-donate" href={links.volunteer} target="_blank" rel="noopener">اتطوّع معانا</a>
+          <a class="btn btn-ghost" href={links.donate}>تبرّع لأطباء الخير</a>
+        </div>
+      </div>
+      <Photo name="hero-eye-exam" eager reveal={false} ratio="4/5" class="hero-photo" sizes="(min-width: 900px) 46vw, 100vw" />
+    </div>
+  </section>
+
+  <section class="section section-mist">
+    <div class="wrap statement">
+      <div class="statement-body">
+        <p class="statement-quote">بدأنا في سبتمبر 2025 بفكرة واحدة: الطب رسالة قبل ما يكون مهنة.</p>
+        <p>نخرج في قافلة إلى مكان جديد في أغلب أيام الجمعة، ونفتح عيادة باطنة في المقطم، وندرّب زملاءنا على مهارات تنقذ الحياة. كل هذا بجهد متطوعين من كليات الطب، تحت مظلة جمعية رسالة للأعمال الخيرية.</p>
+      </div>
+      <Photo name="vest-volunteer" sizes="(min-width: 900px) 40vw, 100vw" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="chip"><span class="chip-dot" aria-hidden="true"></span>أربعة أنشطة</p>
+        <h2>ما نقدّمه</h2>
+        <p class="lead">لكل نشاط صفحة بتفاصيله وصوره.</p>
+      </div>
+      <div class="pillars">
+        {pillars.map((p) => (
+          <article class="pillar">
+            <Photo name={p.photo} ratio="4/3" sizes="(min-width: 900px) 58vw, 100vw" />
+            <div class="pillar-text">
+              <p class="pillar-kicker">{p.kicker}</p>
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+              <a class="more" href={p.href}>{p.more}</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="feature section">
+    <div class="wrap">
+      <Photo name="bm-hall" sizes="(min-width: 1180px) 1180px, 100vw" />
+      <div class="feature-body">
+        <div class="split-text">
+          <p class="chip"><span class="chip-dot" aria-hidden="true"></span>أحدث إيفنت</p>
+          <h2>ما وراء الطب</h2>
+          <p>امتلأت قاعة مدرسة رسالة بالمقطم بطلاب الطب. سبعة أطباء حكوا عن رحلاتهم، وعن الأشياء التي لا تقولها الكتب: لماذا دخلنا الطب، وكيف نذاكر، وماذا بعد التخرج.</p>
+          <a class="more" href="/events/">صور ما وراء الطب</a>
+        </div>
+        <div class="split-text">
+          <dl class="feature-facts">
+            <div><dt>التاريخ</dt><dd>4 سبتمبر 2026</dd></div>
+            <div><dt>المكان</dt><dd>مدرسة رسالة، المقطم</dd></div>
+            <div><dt>المتحدثون</dt><dd>7 أطباء</dd></div>
+          </dl>
+          <p class="speakers">{speakers.map((s) => <span>{s}</span>)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap section-head">
+      <p class="chip"><span class="chip-dot" aria-hidden="true"></span>القوافل</p>
+      <h2>من الميدان</h2>
+      <p class="lead">لكل قافلة اسم وموضوع. هذه لقطات من بعضها.</p>
+    </div>
+    <div class="strip" role="list" aria-label="لقطات من القوافل">
+      {field.map((f) => (
+        <div role="listitem">
+          <Photo name={f.photo} ratio="4/5" sizes="(min-width: 1100px) 380px, 80vw" />
+        </div>
+      ))}
+    </div>
+    <div class="wrap"><a class="more" href="/convoys/">كل القوافل</a></div>
+  </section>
+
+  <section class="section section-mist">
+    <div class="wrap split">
+      <Photo name="course-suture" ratio="4/5" sizes="(min-width: 900px) 40vw, 100vw" />
+      <div class="split-text">
+        <p class="chip"><span class="chip-dot" aria-hidden="true"></span>مجانًا لطلاب الطب</p>
+        <h2>نتعلّم لنخدم</h2>
+        <p class="lead">كورسات عملية مجانية لطلاب الطب البشري، يقدّمها أطباء متخصصون، والأماكن فيها محدودة.</p>
+        <ul class="rows">
+          {courses.map(([name, tag]) => <li><span class="row-main">{name}</span><span class="row-side">{tag}</span></li>)}
+        </ul>
+        <a class="more" href="/courses/">مواعيد الكورسات وصورها</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>الناس وراء الشغل</h2>
+        <p class="lead">كل يوم خير يقف وراءه فريق: استقبال وتنظيم، وكشف، وأخذ تاريخ مرضي، وتوعية، وصيدلية. وكل ربع سنة نكرّم الأكثر عطاءً بدرع «هيرو الخير».</p>
+      </div>
+      <Photo name="team-vehicle" ratio="3/2" sizes="(min-width: 1180px) 1180px, 100vw" />
+      <a class="more" href="/team/">تعرّف على الفريق</a>
+    </div>
+  </section>
+
+  <section class="section section-mist" id="join">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>كن جزءًا من اليوم القادم</h2>
+      </div>
+      <div class="join">
+        <div class="join-card">
+          <h3>تطوّع معنا</h3>
+          <p>لو أنت طالب طب أو طبيب، مكانك معنا. سجّل في الاستمارة، وسنتواصل معك قبل القافلة القادمة.</p>
+          <p class="join-note">نحتاج دائمًا طلاب الفرقة الخامسة وأطباء الامتياز لأخذ التاريخ المرضي.</p>
+          <a class="btn btn-primary" href={links.volunteer} target="_blank" rel="noopener">سجّل في استمارة التطوع</a>
+        </div>
+        <div class="join-card join-card-donate" id="donate">
+          <h3>تبرّع لأطباء الخير</h3>
+          <p>تبرّعك يستلمه فريق النشاط، ويُسجَّل باسم أطباء الخير داخل جمعية رسالة، فيذهب كاملًا إلى القوافل والعلاج والمستلزمات الطبية.</p>
+          <p class="join-note">راسلنا وسنرتّب معك طريقة التبرع المناسبة لك.</p>
+          <a class="btn btn-donate" href={links.donateContact} target="_blank" rel="noopener">راسلنا للتبرع</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

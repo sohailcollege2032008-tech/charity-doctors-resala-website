@@ -1,0 +1,35 @@
+---
+import Section from '../layouts/Section.astro';
+
+const speakers = ['د. هشام عصمت', 'د. رانيا عبد الجليل', 'أ.د. نجلاء فاروق', 'أ.د. مدحت مرسي', 'د. عمرو البرقي', 'د. منصور الجزار', 'د. حسام عيسى'];
+---
+<Section
+  key="events"
+  title="الإيفنتات"
+  description="إيفنتات أطباء الخير: ما وراء الطب، وجمعة الخير في مستشفى رسالة، وشنط رمضان، وحفلة الثلث."
+  lead="أيام نجتمع فيها خارج القوافل والعيادات: نتعلّم من أطباء سبقونا، ونخدم مع رسالة، ونحتفل بما أنجزناه معًا."
+  hero="bm-speaker-crowd"
+  facts={[
+    ['آخر إيفنت', 'ما وراء الطب'],
+    ['التاريخ', '4 سبتمبر 2026'],
+    ['المكان', 'مدرسة رسالة، المقطم'],
+  ]}
+  gallery={['bm-hall', 'bm-balloons', 'bm-rania', 'bm-volunteers', 'bm-crowd', 'grays-hospital', 'ramadan-lentils', 'ramadan-packing', 'ramadan-dusk', 'annual-celebration']}
+  galleryTitle="من الإيفنتات"
+>
+  <section>
+    <h2>ما وراء الطب</h2>
+    <p>سبعة أطباء، وسبع رحلات مختلفة، وقاعة ممتلئة بطلاب الطب. تحدثوا عن لماذا دخلوا الطب، وعن المذاكرة، وعن الطريق بعد التخرج.</p>
+    <p class="speakers-list">{speakers.join('، ')}</p>
+  </section>
+  <section>
+    <h2>أيام أخرى</h2>
+    <ul class="rows">
+      <li><span class="row-main">جمعة الخير في مستشفى رسالة، فيصل</span><span class="row-side">أبريل 2026</span></li>
+      <li><span class="row-main">تعبئة وتوزيع شنط رمضان، شبين القناطر</span><span class="row-side">فبراير 2026</span></li>
+      <li><span class="row-main">وجبات الإفطار لكأس رسالة</span><span class="row-side">يوليو 2026</span></li>
+      <li><span class="row-main">حفلة الثلث السنوي</span><span class="row-side">يناير 2026</span></li>
+      <li><span class="row-main">Family Day</span><span class="row-side">مايو 2026</span></li>
+    </ul>
+  </section>
+</Section>
