@@ -26,7 +26,7 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#060e1a" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="ar_EG" />
@@ -35,10 +35,11 @@ const nav = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&family=Cairo:wght@400;600;700;800&family=Reem+Kufi:wght@600;700&display=swap"
     />
   </head>
   <body>
+    <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
     <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
     <header class="site-header">
       <div class="wrap header-row">
@@ -52,7 +53,7 @@ const nav = [
         <nav class="nav-desktop" aria-label="الأقسام">
           {nav.map((n) => <a href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</a>)}
         </nav>
-        <a class="btn btn-donate btn-sm" href={links.donate} target="_blank" rel="noopener">تبرّع</a>
+        <a class="btn btn-donate btn-sm" href={links.donate}>تبرّع</a>
         <details class="nav-mobile">
           <summary aria-label="القائمة">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"></path></svg>
@@ -83,7 +84,7 @@ const nav = [
         </nav>
         <div class="footer-links">
           <a href={links.volunteer} target="_blank" rel="noopener">استمارة التطوع</a>
-          <a href={links.donate} target="_blank" rel="noopener">التبرع عبر رسالة</a>
+          <a href={links.donate}>التبرع لأطباء الخير</a>
           <a href={links.facebook} target="_blank" rel="noopener">صفحتنا على فيسبوك</a>
           <a href={links.resala} target="_blank" rel="noopener">أطباء الخير على موقع رسالة</a>
         </div>
@@ -92,7 +93,7 @@ const nav = [
 
     <div class="action-bar" data-action-bar hidden>
       <a class="btn btn-primary" href={links.volunteer} target="_blank" rel="noopener">اتطوّع معانا</a>
-      <a class="btn btn-donate" href={links.donate} target="_blank" rel="noopener">تبرّع</a>
+      <a class="btn btn-donate" href={links.donate}>تبرّع</a>
     </div>
 
     <script>

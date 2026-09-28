@@ -46,7 +46,9 @@ export const photos = {
 
 export const links = {
   volunteer: 'https://forms.gle/qHTRQhfqxQDuPg3b8',
-  donate: 'https://resala.org/donation-main',
+  // Donations must be recorded under the activity's name, so they go through the team, not Resala's general page.
+  donate: '/#donate',
+  donateContact: 'https://m.me/atebaaelkheirnasrcity',
   facebook: 'https://www.facebook.com/atebaaelkheirnasrcity',
   resala: 'https://resala.org/atba2-alkhyr',
 };

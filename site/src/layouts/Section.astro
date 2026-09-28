@@ -27,15 +27,15 @@ const action = cta ?? {
 <Base title={`${title} | أطباء الخير`} description={description} current={key}>
   <section class="hero page-hero" data-hero>
     <div class="wrap hero-grid">
-      <Photo name={hero} eager reveal={false} ratio="4/5" sizes="(min-width: 900px) 58vw, 100vw" />
       <div class="hero-text">
-        <p class="crumb"><a href="/">أطباء الخير</a> / {title}</p>
+        <p class="chip"><span class="chip-dot" aria-hidden="true"></span><a href="/">أطباء الخير</a>&nbsp;/ {title}</p>
         <h1>{title}</h1>
         <p class="lead">{lead}</p>
         <dl class="facts">
           {facts.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
         </dl>
       </div>
+      <Photo name={hero} eager reveal={false} ratio="4/5" class="hero-photo" sizes="(min-width: 900px) 46vw, 100vw" />
     </div>
   </section>
 
@@ -68,9 +68,9 @@ const action = cta ?? {
         <a class="btn btn-primary" href={action.href ?? links.volunteer} target="_blank" rel="noopener">{action.label}</a>
       </div>
       <div class="join-card">
-        <h2>ادعم الشغل</h2>
-        <p>التبرعات تمر عبر جمعية رسالة للأعمال الخيرية، وتذهب إلى القوافل والعلاج والمستلزمات الطبية.</p>
-        <a class="btn btn-donate" href={links.donate} target="_blank" rel="noopener">تبرّع عبر موقع رسالة</a>
+        <h2>تبرّع لأطباء الخير</h2>
+        <p>تبرّعك يستلمه فريق النشاط، ويُسجَّل باسم أطباء الخير داخل جمعية رسالة. راسلنا وسنرتّب معك طريقة التبرع.</p>
+        <a class="btn btn-donate" href={links.donateContact} target="_blank" rel="noopener">راسلنا للتبرع</a>
       </div>
     </div>
   </section>

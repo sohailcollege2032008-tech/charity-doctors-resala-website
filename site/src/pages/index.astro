@@ -63,15 +63,17 @@ const speakers = ['د. هشام عصمت', 'د. رانيا عبد الجليل',
 >
   <section class="hero" data-hero>
     <div class="wrap hero-grid">
-      <Photo name="hero-eye-exam" eager reveal={false} ratio="4/5" sizes="(min-width: 900px) 58vw, 100vw" />
       <div class="hero-text">
+        <p class="chip"><span class="chip-dot" aria-hidden="true"></span>نشاط تطوعي في جمعية رسالة، مدينة نصر</p>
+        <p class="hero-brand" aria-hidden="true">أطباء الخير</p>
         <h1>رعاية طبية كريمة، تصل إلى من يحتاجها</h1>
-        <p class="lead">أطباء الخير نشاط تطوعي في جمعية رسالة بمدينة نصر. طلاب طب وأطباء شباب ينزلون بالقوافل، ويديرون عيادة، ويتعلّمون وهم يخدمون.</p>
+        <p class="lead">طلاب طب وأطباء شباب ينزلون بالقوافل، ويديرون عيادة، ويتعلّمون وهم يخدمون. خير الطب لخير الناس.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href={links.volunteer} target="_blank" rel="noopener">اتطوّع معانا</a>
-          <a class="link" href={links.donate} target="_blank" rel="noopener">تبرّع عن طريق رسالة</a>
+          <a class="btn btn-donate" href={links.volunteer} target="_blank" rel="noopener">اتطوّع معانا</a>
+          <a class="btn btn-ghost" href={links.donate}>تبرّع لأطباء الخير</a>
         </div>
       </div>
+      <Photo name="hero-eye-exam" eager reveal={false} ratio="4/5" class="hero-photo" sizes="(min-width: 900px) 46vw, 100vw" />
     </div>
   </section>
 
@@ -88,8 +90,9 @@ const speakers = ['د. هشام عصمت', 'د. رانيا عبد الجليل',
   <section class="section">
     <div class="wrap">
       <div class="section-head">
+        <p class="chip"><span class="chip-dot" aria-hidden="true"></span>أربعة أنشطة</p>
         <h2>ما نقدّمه</h2>
-        <p class="lead">أربعة أنشطة، ولكل منها صفحة بتفاصيلها وصورها.</p>
+        <p class="lead">لكل نشاط صفحة بتفاصيله وصوره.</p>
       </div>
       <div class="pillars">
         {pillars.map((p) => (
@@ -112,6 +115,7 @@ const speakers = ['د. هشام عصمت', 'د. رانيا عبد الجليل',
       <Photo name="bm-hall" sizes="(min-width: 1180px) 1180px, 100vw" />
       <div class="feature-body">
         <div class="split-text">
+          <p class="chip"><span class="chip-dot" aria-hidden="true"></span>أحدث إيفنت</p>
           <h2>ما وراء الطب</h2>
           <p>امتلأت قاعة مدرسة رسالة بالمقطم بطلاب الطب. سبعة أطباء حكوا عن رحلاتهم، وعن الأشياء التي لا تقولها الكتب: لماذا دخلنا الطب، وكيف نذاكر، وماذا بعد التخرج.</p>
           <a class="more" href="/events/">صور ما وراء الطب</a>
@@ -130,6 +134,7 @@ const speakers = ['د. هشام عصمت', 'د. رانيا عبد الجليل',
 
   <section class="section">
     <div class="wrap section-head">
+      <p class="chip"><span class="chip-dot" aria-hidden="true"></span>القوافل</p>
       <h2>من الميدان</h2>
       <p class="lead">لكل قافلة اسم وموضوع. هذه لقطات من بعضها.</p>
     </div>
@@ -147,6 +152,7 @@ const speakers = ['د. هشام عصمت', 'د. رانيا عبد الجليل',
     <div class="wrap split">
       <Photo name="course-suture" ratio="4/5" sizes="(min-width: 900px) 40vw, 100vw" />
       <div class="split-text">
+        <p class="chip"><span class="chip-dot" aria-hidden="true"></span>مجانًا لطلاب الطب</p>
         <h2>نتعلّم لنخدم</h2>
         <p class="lead">كورسات عملية مجانية لطلاب الطب البشري، يقدّمها أطباء متخصصون، والأماكن فيها محدودة.</p>
         <ul class="rows">
@@ -180,11 +186,11 @@ const speakers = ['د. هشام عصمت', 'د. رانيا عبد الجليل',
           <p class="join-note">نحتاج دائمًا طلاب الفرقة الخامسة وأطباء الامتياز لأخذ التاريخ المرضي.</p>
           <a class="btn btn-primary" href={links.volunteer} target="_blank" rel="noopener">سجّل في استمارة التطوع</a>
         </div>
-        <div class="join-card">
-          <h3>تبرّع</h3>
-          <p>التبرعات تمر عبر جمعية رسالة للأعمال الخيرية، وتذهب إلى القوافل والعلاج والمستلزمات الطبية.</p>
-          <p class="join-note">رسالة جمعية خيرية مصرية تأسست عام 1999.</p>
-          <a class="btn btn-donate" href={links.donate} target="_blank" rel="noopener">تبرّع عبر موقع رسالة</a>
+        <div class="join-card join-card-donate" id="donate">
+          <h3>تبرّع لأطباء الخير</h3>
+          <p>تبرّعك يستلمه فريق النشاط، ويُسجَّل باسم أطباء الخير داخل جمعية رسالة، فيذهب كاملًا إلى القوافل والعلاج والمستلزمات الطبية.</p>
+          <p class="join-note">راسلنا وسنرتّب معك طريقة التبرع المناسبة لك.</p>
+          <a class="btn btn-donate" href={links.donateContact} target="_blank" rel="noopener">راسلنا للتبرع</a>
         </div>
       </div>
     </div>
